@@ -6,3 +6,12 @@
     - name: Print URL
       ansible.builtin.debug:
         msg: URL - {{ URL }}
+
+- name: Demo on Task Level Variables
+  hosts: all
+  tasks:
+    - name: Print URL
+      ansible.builtin.debug:
+        msg: URL - {{ URL }}
+      vars:
+        URL: tasks.example.com
